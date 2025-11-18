@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduSkroll - Karnataka Government Competitive Exam Portal | Official</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .dropdown:hover .dropdown-menu { display: block; }
+        .fade-in { animation: fadeIn 0.8s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .dark { background: #1a1a1a; color: #ffffff; }
+        .dark .bg-white { background: #2d2d2d !important; }
+        .dark .text-gray-800 { color: #ffffff !important; }
+        .dark .border-gray-200 { border-color: #404040 !important; }
+        .exam-card:hover { transform: translateY(-4px); transition: all 0.4s ease; box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+        .stats-counter { font-size: 2rem; font-weight: bold; color: #1e40af; }
+        .download-btn { transition: all 0.3s ease; }
+        .download-btn:hover { transform: scale(1.05); }
+        .payment-method { transition: all 0.3s ease; cursor: pointer; }
+        .payment-method:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+        .payment-method.selected { border-color: #3b82f6; background-color: #eff6ff; }
+        .premium-badge { background: linear-gradient(45deg, #ffd700, #ffed4e); color: #1a202c; }
+        .notification-preview { animation: slideIn 0.5s ease-out; }
+        @keyframes slideIn { from { opacity: 0; transform: translateX(-20px); } to { opacity: 1; transform: translateX(0); } }
+    </style>
+</head>
+<body class="bg-gray-50 transition-colors duration-300">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50 border-b-4 border-blue-600">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%231e40af'/%3E%3Cpath d='M25 35h50v30H25z' fill='white'/%3E%3Cpath d='M30 40h40v5H30z' fill='%231e40af'/%3E%3Cpath d='M30 50h40v5H30z' fill='%231e40af'/%3E%3Cpath d='M30 60h40v5H30z' fill='%231e40af'/%3E%3C/svg%3E" alt="Portal Logo" class="w-12 h-12">
+                    <div>
+                        <div class="text-2xl font-bold text-blue-900">EduSkroll</div>
+                        <div class="text-sm text-gray-600">Official Government Portal</div>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium">🏠 Home</a>
+                    
+                    <div class="dropdown relative">
+                        <button class="text-gray-700 hover:text-blue-600 font-medium flex items-center">
+                            📄 Question Papers <i class="fas fa-chevron-down ml-1"></i>
+                        </button>
+                        <div class="dropdown-menu hidden absolute top-full left-0 bg-white text-gray-800 shadow-xl rounded-lg mt-2 w-72 z-50 border">
+                            <div class="p-2">
+                                <a href="#questionPapers" class="block px-4 py-3 hover:bg-blue-50 rounded">🚗 Motor Vehicle Inspector Papers</a>
+                                <a href="#questionPapers" class="block px-4 py-3 hover:bg-blue-50 rounded">🚂 RRB Group-D Papers</a>
+                                <a href="#questionPapers" class="block px-4 py-3 hover:bg-blue-50 rounded">🛡️ Excise SI Papers</a>
+                                <a href="#questionPapers" class="block px-4 py-3 hover:bg-blue-50 rounded">👮 Karnataka PC Papers</a>
+                                <a href="#questionPapers" class="block px-4 py-3 hover:bg-blue-50 rounded">🎖️ PSI Papers (2016-2024)</a>
+                                <a href="#questionPapers" class="block px-4 py-3 hover:bg-blue-50 rounded">🏛️ KAS Papers (2010-2025)</a>
+                                <a href="#questionPapers" class="block px-4 py-3 hover:bg-blue-50 rounded">📚 KEA Compulsory Kannada</a>
+                                <a href="#questionPapers" class="block px-4 py-3 hover:bg-blue-50 rounded">📋 KPSC Compulsory Kannada</a>
+                                <a href="#questionPapers" class="block px-4 py-3 hover:bg-blue-50 rounded">🏢 VAO Papers (2024)</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown relative">
+                        <button class="text-gray-700 hover:text-blue-600 font-medium flex items-center">
+                            📖 Syllabus <i class="fas fa-chevron-down ml-1"></i>
+                        </button>
+                        <div class="dropdown-menu hidden absolute top-full left-0 bg-white text-gray-800 shadow-xl rounded-lg mt-2 w-72 z-50 border">
+                            <div class="p-2">
+                                <a href="#examList" class="block px-4 py-3 hover:bg-blue-50 rounded">🛡️ Karnataka Excise SI Syllabus</a>
+                                <a href="#examList" class="block px-4 py-3 hover:bg-blue-50 rounded">👮 Karnataka PC Syllabus</a>
+                                <a href="#examList" class="block px-4 py-3 hover:bg-blue-50 rounded">🏛️ KAS Syllabus</a>
+                                <a href="#examList" class="block px-4 py-3 hover:bg-blue-50 rounded">🚂 RRB Group D Syllabus</a>
+                                <a href="#examList" class="block px-4 py-3 hover:bg-blue-50 rounded">🏢 PDO Syllabus</a>
+                                <a href="#examList" class="block px-4 py-3 hover:bg-blue-50 rounded">🎖️ PSI Syllabus</a>
+                                <a href="#examList" class="block px-4 py-3 hover:bg-blue-50 rounded">📚 KEA Syllabus (KSET, SDA, FDA)</a>
+                                <a href="#examList" class="block px-4 py-3 hover:bg-blue-50 rounded">🏛️ SSC (MTS, GD, CHSL, CGL)</a>
+                                <a href="#examList" class="block px-4 py-3 hover:bg-blue-50 rounded">👨‍🏫 TET Syllabus</a>
+                                <a href="#examList" class="block px-4 py-3 hover:bg-blue-50 rounded">🎯 Free Coaching UPSC/KAS/Banking</a>
+                                <a href="#examList" class="block px-4 py-3 hover:bg-blue-50 rounded">⚡ KPTCL Syllabus</a>
+                                <a href="#examList" class="block px-4 py-3 hover:bg-blue-50 rounded">🌲 Forest Guard Syllabus</a>
+                                <a href="#examList" class="block px-4 py-3 hover:bg-blue-50 rounded">🏛️ UPSC IAS Syllabus</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#books" class="text-gray-700 hover:text-blue-600 font-medium">📚 Best Books</a>
+                    <a href="#ncert" class="text-gray-700 hover:text-blue-600 font-medium">📖 NCERT Books</a>
+                    <a href="#premium" class="text-gray-700 hover:text-blue-600 font-medium">⭐ Premium</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium">📞 Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button id="themeToggle" class="p-2 rounded-lg hover:bg-gray-100 text-gray-700">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="md:hidden text-gray-700" id="mobileMenu">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 text-white py-20" id="home">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 fade-in">
+                    Karnataka & Central Government
+                    <span class="text-yellow-300">Competitive Exams</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 fade-in opacity-90">
+                    Complete preparation portal with question papers, syllabus, and study materials
+                </p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center items-center mb-12">
+                    <button class="bg-yellow-500 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-colors shadow-lg">
+                        🚀 Start Preparation Now
+                    </button>
+                    <button class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-900 transition-colors">
+                        📱 Download Mobile App
+                    </button>
+                </div>
+                
+                <!-- Stats Counter -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
+                    <div class="text-center">
+                        <div class="stats-counter text-yellow-300">43+</div>
+                        <div class="text-sm opacity-80">Exam Categories</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="stats-counter text-yellow-300">500+</div>
+                        <div class="text-sm opacity-80">Question Papers</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="stats-counter text-yellow-300">1000+</div>
+                        <div class="text-sm opacity-80">Study Materials</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="stats-counter text-yellow-300">50K+</div>
+                        <div class="text-sm opacity-80">Happy Students</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Access Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="bg-gradient-to-br from-red-500 to-red-600 text-white p-6 rounded-xl text-center hover:shadow-lg transition-all cursor-pointer">
+                    <i class="fas fa-fire text-3xl mb-3"></i>
+                    <h3 class="font-bold text-lg">Latest Notifications</h3>
+                    <p class="text-sm opacity-90">New exam announcements</p>
+                </div>
+                <div class="bg-gradient-to-br from-green-500 to-green-600 text-white p-6 rounded-xl text-center hover:shadow-lg transition-all cursor-pointer">
+                    <i class="fas fa-download text-3xl mb-3"></i>
+                    <h3 class="font-bold text-lg">Quick Downloads</h3>
+                    <p class="text-sm opacity-90">Instant PDF access</p>
+                </div>
+                <div class="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 rounded-xl text-center hover:shadow-lg transition-all cursor-pointer">
+                    <i class="fas fa-calendar text-3xl mb-3"></i>
+                    <h3 class="font-bold text-lg">Exam Calendar</h3>
+                    <p class="text-sm opacity-90">Important dates</p>
+                </div>
+                <div class="bg-gradient-to-br from-purple-500 to-purple-600 text-white p-6 rounded-xl text-center hover:shadow-lg transition-all cursor-pointer">
+                    <i class="fas fa-trophy text-3xl mb-3"></i>
+                    <h3 class="font-bold text-lg">Results</h3>
+                    <p class="text-sm opacity-90">Check your results</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Subscription Section -->
+    <section class="py-16 bg-gradient-to-br from-yellow-50 to-orange-50" id="premium">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">
+                    <i class="fas fa-crown mr-3 text-yellow-500"></i>Premium Subscription
+                </h2>
+                <p class="text-xl text-gray-600">Get instant notifications and exclusive access to all study materials</p>
+            </div>
+            
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Subscription Plan -->
+                    <div class="bg-white rounded-2xl shadow-2xl p-8 border-4 border-yellow-400 relative overflow-hidden">
+                        <div class="premium-badge absolute top-0 right-0 px-6 py-2 rounded-bl-2xl font-bold text-lg">
+                            <i class="fas fa-star mr-2"></i>PREMIUM
+                        </div>
+                        
+                        <div class="text-center mb-8">
+                            <h3 class="text-3xl font-bold text-gray-800 mb-4">Monthly Plan</h3>
+                            <div class="flex items-center justify-center mb-4">
+                                <span class="text-6xl font-bold text-blue-600">₹89</span>
+                                <span class="text-xl text-gray-500 ml-2">/month</span>
+                            </div>
+                            <p class="text-gray-600">Everything you need for exam success</p>
+                        </div>
+
+                        <!-- Benefits List -->
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center">
+                                <i class="fas fa-bell text-green-500 text-xl mr-4"></i>
+                                <span class="text-gray-700 font-medium">Instant notifications for new question papers</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-calendar-alt text-blue-500 text-xl mr-4"></i>
+                                <span class="text-gray-700 font-medium">Upcoming exam alerts & important dates</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-download text-purple-500 text-xl mr-4"></i>
+                                <span class="text-gray-700 font-medium">Priority access to all study materials</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-mobile-alt text-orange-500 text-xl mr-4"></i>
+                                <span class="text-gray-700 font-medium">SMS & WhatsApp notifications</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-500 text-xl mr-4"></i>
+                                <span class="text-gray-700 font-medium">Exclusive premium content & tips</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-headset text-red-500 text-xl mr-4"></i>
+                                <span class="text-gray-700 font-medium">24/7 priority customer support</span>
+                            </div>
+                        </div>
+
+                        <button onclick="openPaymentModal()" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-bold text-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg">
+                            <i class="fas fa-credit-card mr-2"></i>Subscribe Now
+                        </button>
+                        
+                        <p class="text-center text-sm text-gray-500 mt-4">
+                            <i class="fas fa-shield-alt mr-1"></i>Secure payment • Cancel anytime • Auto-renewal
+                        </p>
+                    </div>
+
+                    <!-- Notification Previews -->
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">
+                            <i class="fas fa-mobile-alt mr-3 text-blue-600"></i>Sample Notifications You'll Receive
+                        </h3>
+                        
+                        <!-- Sample Notifications -->
+                        <div class="notification-preview bg-green-50 border-l-4 border-green-500 p-6 rounded-lg shadow-md">
+                            <div class="flex items-start">
+                                <i class="fas fa-file-pdf text-green-600 text-2xl mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-green-800 mb-2">🚨 New Question Paper Alert!</h4>
+                                    <p class="text-green-700 mb-2"><strong>KAS Prelims 2024</strong> question paper with answer key is now available for download.</p>
+                                    <p class="text-sm text-green-600">📅 Uploaded: Just now • 📱 Tap to download</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="notification-preview bg-blue-50 border-l-4 border-blue-500 p-6 rounded-lg shadow-md">
+                            <div class="flex items-start">
+                                <i class="fas fa-calendar text-blue-600 text-2xl mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-blue-800 mb-2">📅 Upcoming Exam Reminder</h4>
+                                    <p class="text-blue-700 mb-2"><strong>PSI Recruitment 2024</strong> application deadline in 3 days!</p>
+                                    <p class="text-sm text-blue-600">🔗 Apply now • ⏰ Deadline: 15th March 2024</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="notification-preview bg-purple-50 border-l-4 border-purple-500 p-6 rounded-lg shadow-md">
+                            <div class="flex items-start">
+                                <i class="fas fa-star text-purple-600 text-2xl mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-purple-800 mb-2">⭐ Exclusive Study Material</h4>
+                                    <p class="text-purple-700 mb-2"><strong>Karnataka History</strong> premium notes by top rankers now available!</p>
+                                    <p class="text-sm text-purple-600">📚 Premium content • 🎯 Exam focused</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="notification-preview bg-orange-50 border-l-4 border-orange-500 p-6 rounded-lg shadow-md">
+                            <div class="flex items-start">
+                                <i class="fas fa-trophy text-orange-600 text-2xl mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-orange-800 mb-2">🏆 Result Declared</h4>
+                                    <p class="text-orange-700 mb-2"><strong>KPSC Group-C</strong> results are out! Check your result now.</p>
+                                    <p class="text-sm text-orange-600">🎉 Congratulations to all successful candidates!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Customer Testimonials -->
+                        <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-4 text-center">
+                                <i class="fas fa-quote-left mr-2 text-blue-600"></i>What Our Premium Users Say
+                            </h4>
+                            <div class="space-y-4">
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <p class="text-gray-700 italic mb-2">"Thanks to instant notifications, I never missed any important updates. Cleared KAS in first attempt!"</p>
+                                    <p class="text-sm font-semibold text-blue-600">- Priya S., KAS Officer</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <p class="text-gray-700 italic mb-2">"Premium subscription saved me hours of searching. Got all materials instantly on WhatsApp."</p>
+                                    <p class="text-sm font-semibold text-green-600">- Rajesh K., PSI</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800">Complete Your Subscription</h3>
+                    <button onclick="closePaymentModal()" class="text-gray-500 hover:text-gray-700 text-2xl">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="bg-blue-50 rounded-xl p-6 mb-8">
+                    <h4 class="font-bold text-blue-800 mb-4">Order Summary</h4>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-gray-700">Premium Monthly Plan</span>
+                        <span class="font-semibold">₹89.00</span>
+                    </div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-gray-700">GST (18%)</span>
+                        <span class="font-semibold">₹16.02</span>
+                    </div>
+                    <hr class="my-3">
+                    <div class="flex justify-between items-center text-lg font-bold text-blue-800">
+                        <span>Total Amount</span>
+                        <span>₹105.02</span>
+                    </div>
+                </div>
+
+                <!-- Payment Methods -->
+                <div class="mb-8">
+                    <h4 class="font-bold text-gray-800 mb-6">Choose Payment Method</h4>
+                    
+                    <!-- UPI Payment -->
+                    <div class="payment-method border-2 border-gray-200 rounded-xl p-6 mb-4" onclick="selectPaymentMethod('upi')">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <input type="radio" name="payment" id="upi" class="mr-4">
+                                <div>
+                                    <h5 class="font-semibold text-gray-800">UPI Payment</h5>
+                                    <p class="text-sm text-gray-600">Pay using any UPI app</p>
+                                </div>
+                            </div>
+                            <div class="flex space-x-3">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Crect width='100' height='50' fill='%235f259f'/%3E%3Ctext x='50' y='30' text-anchor='middle' fill='white' font-size='12' font-weight='bold'%3EPhonePe%3C/text%3E%3C/svg%3E" alt="PhonePe" class="w-16 h-8">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Crect width='100' height='50' fill='%23097eff'/%3E%3Ctext x='50' y='30' text-anchor='middle' fill='white' font-size='14' font-weight='bold'%3EGPay%3C/text%3E%3C/svg%3E" alt="GPay" class="w-16 h-8">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Crect width='100' height='50' fill='%2300baf2'/%3E%3Ctext x='50' y='30' text-anchor='middle' fill='white' font-size='12' font-weight='bold'%3EPaytm%3C/text%3E%3C/svg%3E" alt="Paytm" class="w-16 h-8">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Crect width='100' height='50' fill='%23ff6600'/%3E%3Ctext x='50' y='30' text-anchor='middle' fill='white' font-size='16' font-weight='bold'%3EUPI%3C/text%3E%3C/svg%3E" alt="UPI" class="w-16 h-8">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card Payment -->
+                    <div class="payment-method border-2 border-gray-200 rounded-xl p-6 mb-4" onclick="selectPaymentMethod('card')">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <input type="radio" name="payment" id="card" class="mr-4">
+                                <div>
+                                    <h5 class="font-semibold text-gray-800">Credit/Debit Card</h5>
+                                    <p class="text-sm text-gray-600">Visa, Mastercard, RuPay accepted</p>
+                                </div>
+                            </div>
+                            <div class="flex space-x-3">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Crect width='100' height='50' fill='%231a1f71'/%3E%3Ctext x='50' y='30' text-anchor='middle' fill='white' font-size='14' font-weight='bold'%3EVISA%3C/text%3E%3C/svg%3E" alt="Visa" class="w-16 h-8">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Crect width='100' height='50' fill='%23eb001b'/%3E%3Ctext x='50' y='30' text-anchor='middle' fill='white' font-size='10' font-weight='bold'%3EMasterCard%3C/text%3E%3C/svg%3E" alt="Mastercard" class="w-16 h-8">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Crect width='100' height='50' fill='%23097eff'/%3E%3Ctext x='50' y='30' text-anchor='middle' fill='white' font-size='12' font-weight='bold'%3ERuPay%3C/text%3E%3C/svg%3E" alt="RuPay" class="w-16 h-8">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Net Banking -->
+                    <div class="payment-method border-2 border-gray-200 rounded-xl p-6 mb-4" onclick="selectPaymentMethod('netbanking')">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <input type="radio" name="payment" id="netbanking" class="mr-4">
+                                <div>
+                                    <h5 class="font-semibold text-gray-800">Net Banking</h5>
+                                    <p class="text-sm text-gray-600">All major Indian banks supported</p>
+                                </div>
+                            </div>
+                            <div class="flex space-x-2">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30'%3E%3Crect width='60' height='30' fill='%23ff6600'/%3E%3Ctext x='30' y='20' text-anchor='middle' fill='white' font-size='8' font-weight='bold'%3ESBI%3C/text%3E%3C/svg%3E" alt="SBI" class="w-12 h-6">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30'%3E%3Crect width='60' height='30' fill='%23004c8f'/%3E%3Ctext x='30' y='20' text-anchor='middle' fill='white' font-size='8' font-weight='bold'%3EHDFC%3C/text%3E%3C/svg%3E" alt="HDFC" class="w-12 h-6">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30'%3E%3Crect width='60' height='30' fill='%23da020e'/%3E%3Ctext x='30' y='20' text-anchor='middle' fill='white' font-size='8' font-weight='bold'%3EAXIS%3C/text%3E%3C/svg%3E" alt="Axis" class="w-12 h-6">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30'%3E%3Crect width='60' height='30' fill='%23702f8a'/%3E%3Ctext x='30' y='20' text-anchor='middle' fill='white' font-size='8' font-weight='bold'%3EICICI%3C/text%3E%3C/svg%3E" alt="ICICI" class="w-12 h-6">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- QR Code Payment -->
+                    <div class="payment-method border-2 border-gray-200 rounded-xl p-6 mb-6" onclick="selectPaymentMethod('qr')">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <input type="radio" name="payment" id="qr" class="mr-4">
+                                <div>
+                                    <h5 class="font-semibold text-gray-800">QR Code Payment</h5>
+                                    <p class="text-sm text-gray-600">Scan & pay with any UPI app</p>
+                                </div>
+                            </div>
+                            <div class="bg-gray-100 p-2 rounded">
+                                <i class="fas fa-qrcode text-2xl text-gray-600"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Form -->
+                <div id="paymentForm" class="hidden mb-6">
+                    <!-- UPI Form -->
+                    <div id="upiForm" class="hidden">
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium mb-2">UPI ID</label>
+                            <input type="text" placeholder="yourname@upi" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                        </div>
+                    </div>
+
+                    <!-- Card Form -->
+                    <div id="cardForm" class="hidden">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div class="md:col-span-2">
+                                <label class="block text-sm font-medium mb-2">Card Number</label>
+                                <input type="text" placeholder="1234 5678 9012 3456" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Expiry Date</label>
+                                <input type="text" placeholder="MM/YY" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">CVV</label>
+                                <input type="text" placeholder="123" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium mb-2">Cardholder Name</label>
+                            <input type="text" placeholder="Name on Card" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                        </div>
+                    </div>
+
+                    <!-- Net Banking Form -->
+                    <div id="netbankingForm" class="hidden">
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium mb-2">Select Your Bank</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                                <option value="">Choose your bank</option>
+                                <option value="sbi">State Bank of India</option>
+                                <option value="hdfc">HDFC Bank</option>
+                                <option value="icici">ICICI Bank</option>
+                                <option value="axis">Axis Bank</option>
+                                <option value="pnb">Punjab National Bank</option>
+                                <option value="bob">Bank of Baroda</option>
+                                <option value="canara">Canara Bank</option>
+                                <option value="kotak">Kotak Mahindra Bank</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- QR Code Display -->
+                    <div id="qrForm" class="hidden text-center">
+                        <div class="bg-white border-2 border-gray-300 rounded-xl p-8 inline-block">
+                            <div class="w-48 h-48 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="fas fa-qrcode text-6xl text-gray-400"></i>
+                            </div>
+                            <p class="text-sm text-gray-600">Scan this QR code with any UPI app</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security Info -->
+                <div class="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
+                    <div class="flex items-center">
+                        <i class="fas fa-shield-alt text-green-600 text-xl mr-3"></i>
+                        <div>
+                            <h5 class="font-semibold text-green-800">Secure Payment</h5>
+                            <p class="text-sm text-green-700">Your payment information is encrypted and secure. We don't store your card details.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex space-x-4">
+                    <button onclick="closePaymentModal()" class="flex-1 bg-gray-200 text-gray-800 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors">
+                        Cancel
+                    </button>
+                    <button onclick="processPayment()" class="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all">
+                        <i class="fas fa-lock mr-2"></i>Pay ₹105.02
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Success Modal -->
+    <div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-8 text-center">
+            <div class="mb-6">
+                <i class="fas fa-check-circle text-6xl text-green-500 mb-4"></i>
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">Payment Successful!</h3>
+                <p class="text-gray-600">Your premium subscription has been activated</p>
+            </div>
+            
+            <div class="bg-green-50 rounded-lg p-4 mb-6">
+                <h4 class="font-semibold text-green-800 mb-2">Subscription Details</h4>
+                <p class="text-sm text-green-700">Plan: Premium Monthly (₹89/month)</p>
+                <p class="text-sm text-green-700">Valid until: 15th April 2024</p>
+                <p class="text-sm text-green-700">Transaction ID: TXN123456789</p>
+            </div>
+            
+            <button onclick="closeSuccessModal()" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                Continue to Dashboard
+            </button>
+        </div>
+    </div>
+
+    <!-- Complete 43 Exams Directory -->
+    <section class="py-16 bg-gray-50" id="examList">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">
+                    <i class="fas fa-list-alt mr-3 text-blue-600"></i>Complete Exam Information Directory
+                </h2>
+                <p class="text-xl text-gray-600">Click on any exam for detailed information, syllabus, and preparation materials</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- All 43 Exam Cards -->
+                
+                <!-- 1. PSI Information -->
+                <div class="exam-card bg-white border-l-4 border-blue-500 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('psi-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">🎖️</span>
+                        <h3 class="font-bold text-lg text-blue-600">PSI Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Police Sub Inspector exam details</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: March 2024</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded">Active</span>
+                    </div>
+                </div>
+                
+                <!-- 2. PC Information -->
+                <div class="exam-card bg-white border-l-4 border-green-500 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('pc-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">👮</span>
+                        <h3 class="font-bold text-lg text-green-600">PC Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Police Constable exam details</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: April 2024</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded">Active</span>
+                    </div>
+                </div>
+                
+                <!-- 3. PDO Information -->
+                <div class="exam-card bg-white border-l-4 border-purple-500 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('pdo-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">🏢</span>
+                        <h3 class="font-bold text-lg text-purple-600">PDO Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Panchayat Development Officer</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: May 2024</span>
+                        <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded">Upcoming</span>
+                    </div>
+                </div>
+                
+                <!-- 4. VAO Information -->
+                <div class="exam-card bg-white border-l-4 border-orange-500 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('vao-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">📊</span>
+                        <h3 class="font-bold text-lg text-orange-600">VAO (Talati) Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Village Accountant Officer</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: June 2024</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded">Active</span>
+                    </div>
+                </div>
+                
+                <!-- 5. KAS Information -->
+                <div class="exam-card bg-white border-l-4 border-red-500 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('kas-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">🏛️</span>
+                        <h3 class="font-bold text-lg text-red-600">KAS Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Karnataka Administrative Service</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: July 2024</span>
+                        <span class="bg-red-100 text-red-800 px-2 py-1 rounded">Premium</span>
+                    </div>
+                </div>
+                
+                <!-- 6. KPSC Information -->
+                <div class="exam-card bg-white border-l-4 border-indigo-500 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('kpsc-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">📋</span>
+                        <h3 class="font-bold text-lg text-indigo-600">KPSC Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Karnataka Public Service Commission</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: August 2024</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded">Active</span>
+                    </div>
+                </div>
+
+                <!-- 7. Excise SI Information -->
+                <div class="exam-card bg-white border-l-4 border-pink-500 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('excise-si-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">🛡️</span>
+                        <h3 class="font-bold text-lg text-pink-600">Excise SI Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Excise Sub Inspector</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Sep 2024</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded">Active</span>
+                    </div>
+                </div>
+
+                <!-- 8. RRB Group-D Information -->
+                <div class="exam-card bg-white border-l-4 border-teal-500 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('rrb-groupd-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">🚂</span>
+                        <h3 class="font-bold text-lg text-teal-600">RRB Group-D Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Railway Recruitment Board</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Oct 2024</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Central</span>
+                    </div>
+                </div>
+
+                <!-- 9. SSC MTS Information -->
+                <div class="exam-card bg-white border-l-4 border-cyan-500 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('ssc-mts-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">📝</span>
+                        <h3 class="font-bold text-lg text-cyan-600">SSC MTS Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Multi Tasking Staff</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Nov 2024</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Central</span>
+                    </div>
+                </div>
+
+                <!-- 10. SSC GD Information -->
+                <div class="exam-card bg-white border-l-4 border-lime-500 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('ssc-gd-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">🛡️</span>
+                        <h3 class="font-bold text-lg text-lime-600">SSC GD Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">General Duty Constable</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Dec 2024</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Central</span>
+                    </div>
+                </div>
+
+                <!-- 11. Motor Vehicle Inspector -->
+                <div class="exam-card bg-white border-l-4 border-amber-500 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('motor-vehicle-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">🚗</span>
+                        <h3 class="font-bold text-lg text-amber-600">Motor Vehicle Inspector</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Transport Department</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Jan 2025</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded">Active</span>
+                    </div>
+                </div>
+
+                <!-- 12. Forest Guard Information -->
+                <div class="exam-card bg-white border-l-4 border-rose-500 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('forest-guard-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">🌲</span>
+                        <h3 class="font-bold text-lg text-rose-600">Forest Guard Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Karnataka Forest Department</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Feb 2025</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded">Active</span>
+                    </div>
+                </div>
+
+                <!-- 13. KPTCL Information -->
+                <div class="exam-card bg-white border-l-4 border-violet-500 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('kptcl-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">⚡</span>
+                        <h3 class="font-bold text-lg text-violet-600">KPTCL Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Karnataka Power Transmission</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Mar 2025</span>
+                        <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded">Upcoming</span>
+                    </div>
+                </div>
+
+                <!-- 14. KEA Information -->
+                <div class="exam-card bg-white border-l-4 border-emerald-500 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('kea-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">🎓</span>
+                        <h3 class="font-bold text-lg text-emerald-600">KEA Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Karnataka Examinations Authority</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Apr 2025</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded">Active</span>
+                    </div>
+                </div>
+
+                <!-- 15. SDA Information -->
+                <div class="exam-card bg-white border-l-4 border-sky-500 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('sda-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">👔</span>
+                        <h3 class="font-bold text-lg text-sky-600">SDA Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Skill Development Assistant</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: May 2025</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded">Active</span>
+                    </div>
+                </div>
+
+                <!-- 16. FDA Information -->
+                <div class="exam-card bg-white border-l-4 border-fuchsia-500 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('fda-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">💊</span>
+                        <h3 class="font-bold text-lg text-fuchsia-600">FDA Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Food & Drug Assistant</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Jun 2025</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded">Active</span>
+                    </div>
+                </div>
+
+                <!-- 17. KSET Information -->
+                <div class="exam-card bg-white border-l-4 border-slate-500 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('kset-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">📚</span>
+                        <h3 class="font-bold text-lg text-slate-600">KSET Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Karnataka State Eligibility Test</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Jul 2025</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Academic</span>
+                    </div>
+                </div>
+
+                <!-- 18. TET Information -->
+                <div class="exam-card bg-white border-l-4 border-stone-500 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('tet-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">👨‍🏫</span>
+                        <h3 class="font-bold text-lg text-stone-600">TET Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Teacher Eligibility Test</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Aug 2025</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Academic</span>
+                    </div>
+                </div>
+
+                <!-- 19. UPSC IAS Information -->
+                <div class="exam-card bg-white border-l-4 border-red-600 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('upsc-ias-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">🏛️</span>
+                        <h3 class="font-bold text-lg text-red-700">UPSC IAS Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Indian Administrative Service</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Sep 2025</span>
+                        <span class="bg-red-100 text-red-800 px-2 py-1 rounded">Premium</span>
+                    </div>
+                </div>
+
+                <!-- 20. Banking Information -->
+                <div class="exam-card bg-white border-l-4 border-green-600 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('banking-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">🏦</span>
+                        <h3 class="font-bold text-lg text-green-700">Banking Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Bank PO, Clerk, SO Exams</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Oct 2025</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Central</span>
+                    </div>
+                </div>
+
+                <!-- 21. SSC CHSL Information -->
+                <div class="exam-card bg-white border-l-4 border-blue-600 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('ssc-chsl-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">📋</span>
+                        <h3 class="font-bold text-lg text-blue-700">SSC CHSL Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Combined Higher Secondary Level</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Nov 2025</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Central</span>
+                    </div>
+                </div>
+
+                <!-- 22. SSC CGL Information -->
+                <div class="exam-card bg-white border-l-4 border-purple-600 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('ssc-cgl-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">🎯</span>
+                        <h3 class="font-bold text-lg text-purple-700">SSC CGL Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Combined Graduate Level</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Dec 2025</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Central</span>
+                    </div>
+                </div>
+
+                <!-- 23. RRB NTPC Information -->
+                <div class="exam-card bg-white border-l-4 border-orange-600 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('rrb-ntpc-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">🚄</span>
+                        <h3 class="font-bold text-lg text-orange-700">RRB NTPC Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Non-Technical Popular Categories</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Jan 2026</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Central</span>
+                    </div>
+                </div>
+
+                <!-- 24. RRB JE Information -->
+                <div class="exam-card bg-white border-l-4 border-indigo-600 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('rrb-je-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">⚙️</span>
+                        <h3 class="font-bold text-lg text-indigo-700">RRB JE Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Junior Engineer</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Feb 2026</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Central</span>
+                    </div>
+                </div>
+
+                <!-- 25. IBPS PO Information -->
+                <div class="exam-card bg-white border-l-4 border-emerald-600 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('ibps-po-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">🏛️</span>
+                        <h3 class="font-bold text-lg text-emerald-700">IBPS PO Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Probationary Officer</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Mar 2026</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Central</span>
+                    </div>
+                </div>
+
+                <!-- 26. IBPS Clerk Information -->
+                <div class="exam-card bg-white border-l-4 border-teal-600 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('ibps-clerk-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">📊</span>
+                        <h3 class="font-bold text-lg text-teal-700">IBPS Clerk Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Clerical Cadre</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Apr 2026</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Central</span>
+                    </div>
+                </div>
+
+                <!-- 27. SBI PO Information -->
+                <div class="exam-card bg-white border-l-4 border-cyan-600 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('sbi-po-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">🏦</span>
+                        <h3 class="font-bold text-lg text-cyan-700">SBI PO Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">State Bank Probationary Officer</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: May 2026</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Central</span>
+                    </div>
+                </div>
+
+                <!-- 28. SBI Clerk Information -->
+                <div class="exam-card bg-white border-l-4 border-sky-600 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('sbi-clerk-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">📝</span>
+                        <h3 class="font-bold text-lg text-sky-700">SBI Clerk Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">State Bank Junior Associate</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Jun 2026</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Central</span>
+                    </div>
+                </div>
+
+                <!-- 29. LIC AAO Information -->
+                <div class="exam-card bg-white border-l-4 border-rose-600 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('lic-aao-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">🛡️</span>
+                        <h3 class="font-bold text-lg text-rose-700">LIC AAO Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Assistant Administrative Officer</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Jul 2026</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Central</span>
+                    </div>
+                </div>
+
+                <!-- 30. NIACL AO Information -->
+                <div class="exam-card bg-white border-l-4 border-pink-600 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('niacl-ao-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">🏢</span>
+                        <h3 class="font-bold text-lg text-pink-700">NIACL AO Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Administrative Officer</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Aug 2026</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Central</span>
+                    </div>
+                </div>
+
+                <!-- 31. CAPF AC Information -->
+                <div class="exam-card bg-white border-l-4 border-red-500 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('capf-ac-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">🎖️</span>
+                        <h3 class="font-bold text-lg text-red-600">CAPF AC Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Assistant Commandant</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Sep 2026</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Central</span>
+                    </div>
+                </div>
+
+                <!-- 32. CDS Information -->
+                <div class="exam-card bg-white border-l-4 border-green-500 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('cds-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">⚔️</span>
+                        <h3 class="font-bold text-lg text-green-600">CDS Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Combined Defence Services</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Oct 2026</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Central</span>
+                    </div>
+                </div>
+
+                <!-- 33. NDA Information -->
+                <div class="exam-card bg-white border-l-4 border-blue-500 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('nda-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">🎯</span>
+                        <h3 class="font-bold text-lg text-blue-600">NDA Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">National Defence Academy</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Nov 2026</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Central</span>
+                    </div>
+                </div>
+
+                <!-- 34. AFCAT Information -->
+                <div class="exam-card bg-white border-l-4 border-purple-500 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('afcat-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">✈️</span>
+                        <h3 class="font-bold text-lg text-purple-600">AFCAT Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Air Force Common Admission Test</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Dec 2026</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Central</span>
+                    </div>
+                </div>
+
+                <!-- 35. CISF AC Information -->
+                <div class="exam-card bg-white border-l-4 border-orange-500 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('cisf-ac-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">🛡️</span>
+                        <h3 class="font-bold text-lg text-orange-600">CISF AC Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Assistant Commandant</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Jan 2027</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Central</span>
+                    </div>
+                </div>
+
+                <!-- 36. BSF HC Information -->
+                <div class="exam-card bg-white border-l-4 border-indigo-500 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('bsf-hc-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">🚁</span>
+                        <h3 class="font-bold text-lg text-indigo-600">BSF HC Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Head Constable</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Feb 2027</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Central</span>
+                    </div>
+                </div>
+
+                <!-- 37. CRPF HC Information -->
+                <div class="exam-card bg-white border-l-4 border-emerald-500 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('crpf-hc-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">🚔</span>
+                        <h3 class="font-bold text-lg text-emerald-600">CRPF HC Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Head Constable</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Mar 2027</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Central</span>
+                    </div>
+                </div>
+
+                <!-- 38. ITBP HC Information -->
+                <div class="exam-card bg-white border-l-4 border-teal-500 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('itbp-hc-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">🏔️</span>
+                        <h3 class="font-bold text-lg text-teal-600">ITBP HC Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Head Constable</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Apr 2027</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Central</span>
+                    </div>
+                </div>
+
+                <!-- 39. SSB HC Information -->
+                <div class="exam-card bg-white border-l-4 border-cyan-500 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('ssb-hc-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">🛂</span>
+                        <h3 class="font-bold text-lg text-cyan-600">SSB HC Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Head Constable</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: May 2027</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Central</span>
+                    </div>
+                </div>
+
+                <!-- 40. Delhi Police Information -->
+                <div class="exam-card bg-white border-l-4 border-sky-500 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('delhi-police-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">🚓</span>
+                        <h3 class="font-bold text-lg text-sky-600">Delhi Police Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Constable & Head Constable</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Jun 2027</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Central</span>
+                    </div>
+                </div>
+
+                <!-- 41. UP Police Information -->
+                <div class="exam-card bg-white border-l-4 border-rose-500 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('up-police-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">👮‍♂️</span>
+                        <h3 class="font-bold text-lg text-rose-600">UP Police Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Constable & SI</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Jul 2027</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded">State</span>
+                    </div>
+                </div>
+
+                <!-- 42. MP Police Information -->
+                <div class="exam-card bg-white border-l-4 border-pink-500 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('mp-police-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">🚨</span>
+                        <h3 class="font-bold text-lg text-pink-600">MP Police Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Constable & SI</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Aug 2027</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded">State</span>
+                    </div>
+                </div>
+
+                <!-- 43. Rajasthan Police Information -->
+                <div class="exam-card bg-white border-l-4 border-amber-500 rounded-lg p-6 shadow-md hover:shadow-xl cursor-pointer" onclick="navigateToExam('rajasthan-police-info')">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">🏰</span>
+                        <h3 class="font-bold text-lg text-amber-600">Rajasthan Police Information</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Constable & SI</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>📅 Next Exam: Sep 2027</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded">State</span>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-gray-600 mb-4">Can't find your exam? We're constantly adding new categories.</p>
+                <button class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                    📧 Request New Exam Category
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Question Papers Section -->
+    <section class="py-16 bg-white" id="questionPapers">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">
+                    <i class="fas fa-file-pdf mr-3 text-red-600"></i>Question Papers & Answer Keys
+                </h2>
+                <p class="text-xl text-gray-600">Download previous year papers with detailed solutions</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Motor Vehicle Inspector -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl shadow-lg p-8 border-l-4 border-blue-500">
+                    <div class="flex items-center mb-6">
+                        <span class="text-3xl mr-4">🚗</span>
+                        <h3 class="text-2xl font-bold text-blue-700">Motor Vehicle Inspector</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-lg p-4 shadow-sm">
+                            <div class="flex justify-between items-center mb-3">
+                                <p class="font-semibold text-lg">📅 14-05-2025</p>
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Latest</span>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3">
+                                <button class="download-btn bg-red-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-red-700 flex items-center justify-center" onclick="downloadPDF('mvi-paper1-gk')">
+                                    <i class="fas fa-download mr-2"></i>Paper-1 GK
+                                </button>
+                                <button class="download-btn bg-green-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-700 flex items-center justify-center" onclick="downloadPDF('mvi-key-answer')">
+                                    <i class="fas fa-key mr-2"></i>Key Answer
+                                </button>
+                                <button class="download-btn bg-purple-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-purple-700 flex items-center justify-center" onclick="downloadPDF('mvi-revised-key')">
+                                    <i class="fas fa-edit mr-2"></i>Revised Key
+                                </button>
+                                <button class="download-btn bg-blue-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700 flex items-center justify-center" onclick="downloadPDF('mvi-paper2-comm')">
+                                    <i class="fas fa-download mr-2"></i>Paper-2 Comm
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RRB Group-D Enhanced -->
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl shadow-lg p-8 border-l-4 border-green-500">
+                    <div class="flex items-center mb-6">
+                        <span class="text-3xl mr-4">🚂</span>
+                        <h3 class="text-2xl font-bold text-green-700">RRB Group-D Papers</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-lg p-4 shadow-sm">
+                            <p class="font-semibold text-lg mb-3">📚 Previous Years Collection</p>
+                            <div class="grid grid-cols-2 gap-3">
+                                <button class="download-btn bg-red-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-red-700 flex items-center justify-center" onclick="downloadPDF('rrb-2013-kannada')">
+                                    <i class="fas fa-download mr-2"></i>2013 Kannada
+                                </button>
+                                <button class="download-btn bg-red-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-red-700 flex items-center justify-center" onclick="downloadPDF('rrb-2013-english')">
+                                    <i class="fas fa-download mr-2"></i>2013 English
+                                </button>
+                                <button class="download-btn bg-red-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-red-700 flex items-center justify-center" onclick="downloadPDF('rrb-2022-kannada')">
+                                    <i class="fas fa-download mr-2"></i>2022 Kannada
+                                </button>
+                                <button class="download-btn bg-red-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-red-700 flex items-center justify-center" onclick="downloadPDF('rrb-2022-english')">
+                                    <i class="fas fa-download mr-2"></i>2022 English
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PSI Papers Enhanced -->
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl shadow-lg p-8 border-l-4 border-purple-500">
+                    <div class="flex items-center mb-6">
+                        <span class="text-3xl mr-4">🎖️</span>
+                        <h3 class="text-2xl font-bold text-purple-700">PSI Papers (2016-2024)</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-lg p-4 shadow-sm">
+                            <p class="font-semibold text-lg mb-3">📊 Complete Collection</p>
+                            <p class="text-sm text-gray-600 mb-3">Exam Date | Post Name | Vacancies</p>
+                            <div class="grid grid-cols-1 gap-3">
+                                <button class="download-btn bg-red-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-red-700 flex items-center justify-center" onclick="downloadPDF('psi-kannada-2024')">
+                                    <i class="fas fa-download mr-2"></i>Kannada Version Papers
+                                </button>
+                                <button class="download-btn bg-red-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-red-700 flex items-center justify-center" onclick="downloadPDF('psi-english-2024')">
+                                    <i class="fas fa-download mr-2"></i>English Version Papers
+                                </button>
+                                <button class="download-btn bg-green-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-700 flex items-center justify-center" onclick="downloadPDF('psi-key-2024')">
+                                    <i class="fas fa-key mr-2"></i>Complete Answer Keys
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KAS Papers Enhanced -->
+                <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl shadow-lg p-8 border-l-4 border-orange-500">
+                    <div class="flex items-center mb-6">
+                        <span class="text-3xl mr-4">🏛️</span>
+                        <h3 class="text-2xl font-bold text-orange-700">KAS Papers (2010-2025)</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-lg p-4 shadow-sm">
+                            <p class="font-semibold text-lg mb-3">🎯 Prelims & Mains</p>
+                            <div class="grid grid-cols-1 gap-3">
+                                <button class="download-btn bg-red-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-red-700 flex items-center justify-center" onclick="downloadPDF('kas-prelims-2024')">
+                                    <i class="fas fa-download mr-2"></i>Prelims Papers 2024
+                                </button>
+                                <button class="download-btn bg-red-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-red-700 flex items-center justify-center" onclick="downloadPDF('kas-mains-2024')">
+                                    <i class="fas fa-download mr-2"></i>Mains Papers 2024
+                                </button>
+                                <button class="download-btn bg-green-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-700 flex items-center justify-center" onclick="downloadPDF('kas-key-2024')">
+                                    <i class="fas fa-key mr-2"></i>Complete Answer Keys
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <div class="bg-blue-50 rounded-xl p-8 max-w-2xl mx-auto">
+                    <h3 class="text-2xl font-bold text-blue-800 mb-4">📊 Download Statistics</h3>
+                    <div class="grid grid-cols-3 gap-6">
+                        <div>
+                            <div class="text-3xl font-bold text-blue-600">500+</div>
+                            <div class="text-sm text-gray-600">Question Papers</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-green-600">1000+</div>
+                            <div class="text-sm text-gray-600">Answer Keys</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-purple-600">50K+</div>
+                            <div class="text-sm text-gray-600">Downloads</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Books Section -->
+    <section class="py-16 bg-gray-50" id="books">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">
+                    <i class="fas fa-book mr-3 text-green-600"></i>Best Books List & Study Materials
+                </h2>
+                <p class="text-xl text-gray-600">Recommended books by toppers and experts</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Enhanced Book Categories -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 shadow-lg border-l-4 border-blue-500 hover:shadow-xl transition-all">
+                    <div class="flex items-center mb-6">
+                        <span class="text-3xl mr-4">🎓</span>
+                        <h3 class="text-2xl font-bold text-blue-700">KPSC Books</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-book text-blue-500 mr-3"></i>
+                            <a href="#" class="text-blue-600 hover:underline font-medium">Karnataka History Complete Guide</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-globe text-blue-500 mr-3"></i>
+                            <a href="#" class="text-blue-600 hover:underline font-medium">Karnataka Geography Atlas</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-newspaper text-blue-500 mr-3"></i>
+                            <a href="#" class="text-blue-600 hover:underline font-medium">Current Affairs Monthly</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-graduation-cap text-blue-500 mr-3"></i>
+                            <a href="#" class="text-blue-600 hover:underline font-medium">General Studies Comprehensive</a>
+                        </li>
+                    </ul>
+                    <button class="mt-6 w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                        📚 View All KPSC Books
+                    </button>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-8 shadow-lg border-l-4 border-green-500 hover:shadow-xl transition-all">
+                    <div class="flex items-center mb-6">
+                        <span class="text-3xl mr-4">👔</span>
+                        <h3 class="text-2xl font-bold text-green-700">SDA / FDA Books</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-clipboard text-green-500 mr-3"></i>
+                            <a href="#" class="text-green-600 hover:underline font-medium">Office Procedures Manual</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-laptop text-green-500 mr-3"></i>
+                            <a href="#" class="text-green-600 hover:underline font-medium">Computer Knowledge Guide</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-brain text-green-500 mr-3"></i>
+                            <a href="#" class="text-green-600 hover:underline font-medium">General Knowledge Encyclopedia</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-language text-green-500 mr-3"></i>
+                            <a href="#" class="text-green-600 hover:underline font-medium">Kannada Language Mastery</a>
+                        </li>
+                    </ul>
+                    <button class="mt-6 w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors">
+                        📚 View All SDA/FDA Books
+                    </button>
+                </div>
+
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-8 shadow-lg border-l-4 border-purple-500 hover:shadow-xl transition-all">
+                    <div class="flex items-center mb-6">
+                        <span class="text-3xl mr-4">🏛️</span>
+                        <h3 class="text-2xl font-bold text-purple-700">KEA Books</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-certificate text-purple-500 mr-3"></i>
+                            <a href="#" class="text-purple-600 hover:underline font-medium">KSET Preparation Complete</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-user-tie text-purple-500 mr-3"></i>
+                            <a href="#" class="text-purple-600 hover:underline font-medium">SDA/FDA Comprehensive Guide</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-language text-purple-500 mr-3"></i>
+                            <a href="#" class="text-purple-600 hover:underline font-medium">Compulsory Kannada Mastery</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-file-alt text-purple-500 mr-3"></i>
+                            <a href="#" class="text-purple-600 hover:underline font-medium">Previous Papers Collection</a>
+                        </li>
+                    </ul>
+                    <button class="mt-6 w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors">
+                        📚 View All KEA Books
+                    </button>
+                </div>
+
+                <!-- Continue with remaining book categories... -->
+                <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-8 shadow-lg border-l-4 border-red-500 hover:shadow-xl transition-all">
+                    <div class="flex items-center mb-6">
+                        <span class="text-3xl mr-4">🛡️</span>
+                        <h3 class="text-2xl font-bold text-red-700">KSP (Police) Books</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-medal text-red-500 mr-3"></i>
+                            <a href="#" class="text-red-600 hover:underline font-medium">PSI Complete Preparation</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-shield-alt text-red-500 mr-3"></i>
+                            <a href="#" class="text-red-600 hover:underline font-medium">PC Study Material</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-balance-scale text-red-500 mr-3"></i>
+                            <a href="#" class="text-red-600 hover:underline font-medium">Law & Constitution</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-running text-red-500 mr-3"></i>
+                            <a href="#" class="text-red-600 hover:underline font-medium">Physical Training Guide</a>
+                        </li>
+                    </ul>
+                    <button class="mt-6 w-full bg-red-600 text-white py-3 rounded-lg hover:bg-red-700 transition-colors">
+                        📚 View All Police Books
+                    </button>
+                </div>
+
+                <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-xl p-8 shadow-lg border-l-4 border-yellow-500 hover:shadow-xl transition-all">
+                    <div class="flex items-center mb-6">
+                        <span class="text-3xl mr-4">🌲</span>
+                        <h3 class="text-2xl font-bold text-yellow-700">Forest Dept Books</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-tree text-yellow-600 mr-3"></i>
+                            <a href="#" class="text-yellow-700 hover:underline font-medium">Forest Guard Complete Guide</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-leaf text-yellow-600 mr-3"></i>
+                            <a href="#" class="text-yellow-700 hover:underline font-medium">Environmental Science</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-paw text-yellow-600 mr-3"></i>
+                            <a href="#" class="text-yellow-700 hover:underline font-medium">Wildlife Conservation</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-gavel text-yellow-600 mr-3"></i>
+                            <a href="#" class="text-yellow-700 hover:underline font-medium">Forest Laws & Acts</a>
+                        </li>
+                    </ul>
+                    <button class="mt-6 w-full bg-yellow-600 text-white py-3 rounded-lg hover:bg-yellow-700 transition-colors">
+                        📚 View All Forest Books
+                    </button>
+                </div>
+
+                <div class="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-xl p-8 shadow-lg border-l-4 border-indigo-500 hover:shadow-xl transition-all">
+                    <div class="flex items-center mb-6">
+                        <span class="text-3xl mr-4">⚙️</span>
+                        <h3 class="text-2xl font-bold text-indigo-700">AE / AEE Books</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-cogs text-indigo-500 mr-3"></i>
+                            <a href="#" class="text-indigo-600 hover:underline font-medium">Engineering Fundamentals</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-tools text-indigo-500 mr-3"></i>
+                            <a href="#" class="text-indigo-600 hover:underline font-medium">Technical Knowledge Bank</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-book-open text-indigo-500 mr-3"></i>
+                            <a href="#" class="text-indigo-600 hover:underline font-medium">General Studies for Engineers</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-history text-indigo-500 mr-3"></i>
+                            <a href="#" class="text-indigo-600 hover:underline font-medium">Previous Papers Analysis</a>
+                        </li>
+                    </ul>
+                    <button class="mt-6 w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition-colors">
+                        📚 View All Engineering Books
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced NCERT Books Section -->
+    <section class="py-16 bg-white" id="ncert">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">
+                    <i class="fas fa-book-open mr-3 text-orange-600"></i>NCERT Books Collection
+                </h2>
+                <p class="text-xl text-gray-600">Complete NCERT books in Kannada & English medium (Classes 6-12)</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Kannada Medium Enhanced -->
+                <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl shadow-xl p-8 border-l-4 border-orange-500">
+                    <div class="flex items-center mb-8">
+                        <span class="text-4xl mr-4">🕉️</span>
+                        <h3 class="text-3xl font-bold text-orange-700">Kannada Medium</h3>
+                    </div>
+                    
+                    <div class="space-y-8">
+                        <!-- History Section -->
+                        <div class="bg-white rounded-lg p-6 shadow-sm">
+                            <h4 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                                <i class="fas fa-landmark text-orange-500 mr-3"></i>
+                                6th to 12th History Books
+                            </h4>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                                <button class="download-btn bg-orange-600 text-white px-3 py-2 rounded-lg text-sm hover:bg-orange-700 flex items-center justify-center" onclick="downloadPDF('ncert-history-6-kan')">
+                                    <i class="fas fa-download mr-1"></i>6th
+                                </button>
+                                <button class="download-btn bg-orange-600 text-white px-3 py-2 rounded-lg text-sm hover:bg-orange-700 flex items-center justify-center" onclick="downloadPDF('ncert-history-7-kan')">
+                                    <i class="fas fa-download mr-1"></i>7th
+                                </button>
+                                <button class="download-btn bg-orange-600 text-white px-3 py-2 rounded-lg text-sm hover:bg-orange-700 flex items-center justify-center" onclick="downloadPDF('ncert-history-8-kan')">
+                                    <i class="fas fa-download mr-1"></i>8th
+                                </button>
+                                <button class="download-btn bg-orange-600 text-white px-3 py-2 rounded-lg text-sm hover:bg-orange-700 flex items-center justify-center" onclick="downloadPDF('ncert-history-9-kan')">
+                                    <i class="fas fa-download mr-1"></i>9th
+                                </button>
+                                <button class="download-btn bg-orange-600 text-white px-3 py-2 rounded-lg text-sm hover:bg-orange-700 flex items-center justify-center" onclick="downloadPDF('ncert-history-10-kan')">
+                                    <i class="fas fa-download mr-1"></i>10th
+                                </button>
+                                <button class="download-btn bg-orange-600 text-white px-3 py-2 rounded-lg text-sm hover:bg-orange-700 flex items-center justify-center" onclick="downloadPDF('ncert-history-11-kan')">
+                                    <i class="fas fa-download mr-1"></i>11th
+                                </button>
+                                <button class="download-btn bg-orange-600 text-white px-3 py-2 rounded-lg text-sm hover:bg-orange-700 flex items-center justify-center" onclick="downloadPDF('ncert-history-12-kan')">
+                                    <i class="fas fa-download mr-1"></i>12th
+                                </button>
+                                <button class="download-btn bg-red-600 text-white px-3 py-2 rounded-lg text-sm hover:bg-red-700 flex items-center justify-center" onclick="downloadPDF('ncert-history-all-kan')">
+                                    <i class="fas fa-download mr-1"></i>All
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Geography Section -->
+                        <div class="bg-white rounded-lg p-6 shadow-sm">
+                            <h4 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                                <i class="fas fa-globe text-green-500 mr-3"></i>
+                                6th to 12th Geography Books
+                            </h4>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                                <button class="download-btn bg-green-600 text-white px-3 py-2 rounded-lg text-sm hover:bg-green-700 flex items-center justify-center" onclick="downloadPDF('ncert-geo-6-kan')">
+                                    <i class="fas fa-download mr-1"></i>6th
+                                </button>
+                                <button class="download-btn bg-green-600 text-white px-3 py-2 rounded-lg text-sm hover:bg-green-700 flex items-center justify-center" onclick="downloadPDF('ncert-geo-7-kan')">
+                                    <i class="fas fa-download mr-1"></i>7th
+                                </button>
+                                <button class="download-btn bg-green-600 text-white px-3 py-2 rounded-lg text-sm hover:bg-green-700 flex items-center justify-center" onclick="downloadPDF('ncert-geo-8-kan')">
+                                    <i class<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97843e3803530eca',t:'MTc1NjcyNDIwOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
